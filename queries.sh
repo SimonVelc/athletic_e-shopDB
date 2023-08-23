@@ -5,7 +5,7 @@ echo -e "\n~~~~~ Welcome to Athletic e-shop"
 PSQL="psql -X --username=psymon --dbname=athletik_e_shop --tuples-only -c"
 
 #get products catalog
-CATALOG=$($PSQL "SELECT * FROM products;")
+CATALOG=$($PSQL "SELECT * FROM products ORDER BY product_id;")
 
 #amount counter
 AMOUNT=0.0
